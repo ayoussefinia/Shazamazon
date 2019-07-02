@@ -39,6 +39,7 @@ function logPurchase(prod, quant) {
     console.log(`thank you for your $ ${purchasePrice} purchase of ${res[0].product_name}`)
     // listInventory();
     // return res;
+    setTimeout(askWhichProduct, 1200);
   })
 }
 
@@ -146,7 +147,7 @@ let customerProduct, customerQuantity;
 
 
 function askWhichProduct() {
-  console.log('prompt user was called');
+
   inquirer.prompt([
     {
       type: "input",
